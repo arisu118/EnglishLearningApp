@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = "echo 'Static HTML site with Python functions'"
+
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  DISABLE_NEXT_PLUGIN = "true"
