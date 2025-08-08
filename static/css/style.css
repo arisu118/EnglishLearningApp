@@ -1,0 +1,206 @@
+/* Custom styles for English Learning App */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.topic-card {
+    cursor: pointer;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.topic-card h4 {
+    margin: 0;
+    text-align: center;
+}
+
+.topic-card .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.flashcard {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flashcard:hover {
+    transform: scale(1.02);
+}
+
+.flashcard .card-body {
+    padding: 3rem;
+}
+
+#word-display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#meaning-display {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#pronunciation-display {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+#example-display {
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #fff;
+}
+
+.quiz-question {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-option {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+    background: #e9ecef;
+    border-color: #007bff;
+}
+
+.quiz-option.selected {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.quiz-option.correct {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.quiz-option.incorrect {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.progress-card {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .flashcard .card-body {
+        padding: 1.5rem;
+    }
+    
+    #word-display {
+        font-size: 2rem;
+    }
+    
+    #meaning-display {
+        font-size: 1.5rem;
+    }
+    
+    .topic-card {
+        height: 150px;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Score display */
+.score-excellent {
+    color: #28a745;
+}
+
+.score-good {
+    color: #17a2b8;
+}
+
+.score-fair {
+    color: #ffc107;
+}
+
+.score-poor {
+    color: #dc3545;
+}
