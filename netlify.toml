@@ -1,13 +1,10 @@
 [build]
-  functions = "netlify/functions"
-  publish = "public"
-  command = "echo 'Build complete - Static site with Python functions'"
+  functions = "functions"
+  publish = "dist"
+  command = "echo 'Static HTML site ready'"
 
-# Chỉ định environment variables nếu cần
 [build.environment]
-  NODE_VERSION = "18"
-
-# XÓA HOÀN TOÀN phần plugins - không cần disable Next.js plugin
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[redirects]]
   from = "/api/*"
