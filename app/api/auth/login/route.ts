@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { compare } from 'bcryptjs'
-import jwt from 'jsonwebtoken'
+import * as jwt from 'jsonwebtoken'
 import db from '../../../lib/database'
 
 export async function POST(request: NextRequest) {
