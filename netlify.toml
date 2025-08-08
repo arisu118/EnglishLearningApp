@@ -1,6 +1,17 @@
 [build]
   functions = "netlify/functions"
-  publish = "public"             # Đã thay đổi để chỉ định thư mục xuất bản
+  publish = "public"
+  command = "echo 'Build complete - Static site with Python functions'"
+
+# Ghi đè framework detection - QUAN TRỌNG
+[build.environment]
+  NODE_VERSION = "18"
+
+# Tắt Next.js detection
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = true
 
 [[redirects]]
   from = "/api/*"
